@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/* .container {
+    width: 300 px ;
+    height: 200 px ;
+    background-color: brown;
+}
+
+#ya{
+ height: 100%;
+ width: 100%;
+ background-color: red;
+} */
+
+    </style>
+</head>
+<body>
+    <select onchange="flagchange()" name="select" id="flag">
+    <option value="images/J.png">Jordan</option>
+    <option value="images/F.png">France</option>
+    <option value="images/M.png">Moroco</option>
+</select>
+
+<div class="container">
+<img id="ya" src="images/noimage.png" alt="">
+
+
+</div>
+
+ <script>
+function flagchange() {
+    let ya = document.getElementById("ya");
+    let flag = document.getElementById('flag').value;
+    ya.src= flag;
+}
+ </script> 
+</body>
+</html>

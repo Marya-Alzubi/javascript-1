@@ -11,7 +11,53 @@
         }
     </style>
     <script>
-        /* TODO: write JS code here */
+        window.onload = initial;
+          function initial() {
+            // I declare [var box] as variable and give it a value which is ("mydiv" from HTML)
+            var box = document.getElementById("mydiv");
+
+
+            // give property to [var box] in javascript
+            box.style.backgroundColor = "blue";
+            // give property to [var box] in javascript
+            box.onclick = changeColor;
+        }
+        
+
+        function changeColor() {
+            //this// refer to [var box]
+            var color = this.style.backgroundColor;
+            var newcolor;
+            switch (color) {
+                case "red":
+                // if // box.style.backgroundColor="red"
+                    newcolor = "green";
+            //box.style.backgroundColor = "green";       
+                    break;
+
+
+                case "green":
+                // if // box.style.backgroundColor="green"
+                    newcolor = "blue";
+            //box.style.backgroundColor = "blue";        
+                    break;
+
+
+
+                case "blue":
+                // if // box.style.backgroundColor="blue" 
+                    newcolor = "red";
+            //box.style.backgroundColor = "red";         
+                    break;
+            }
+            //this// refere to [var box] 
+            //box.style.backgroundColor = "newcolor";
+            this.style.backgroundColor = newcolor;
+        }
+
+      
+
+        
     </script>
 </head>
 <body>
